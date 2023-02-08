@@ -1,0 +1,14 @@
+class solution :
+
+    def isPalindrome(self, x: int) -> bool:        
+        def reverse(n):
+            rev=0
+            while n!=0:
+                rem = n%10
+                rev=rev*10+rem
+                n=n//10
+            return rev
+        if x<0:
+            return False
+        else:
+            return x==reverse(x)
